@@ -4,6 +4,7 @@ import static java.util.Collections.emptyList;
 import static org.example.problem1.Module.Status.NOT_STARTED;
 
 import java.util.List;
+import java.util.Map;
 
 // TEST EXECUTION
 public class TestSuite1 {
@@ -39,9 +40,9 @@ public class TestSuite1 {
             new Module(3, 1, NOT_STARTED, List.of(0, 1), List.of(4)),
             new Module(4, 2, NOT_STARTED, List.of(3), emptyList()));
 
-    boolean isValidProduct = service.creteProduct(modules);
+    Map<Integer, Module> product = service.creteProduct(modules);
 
-    if (isValidProduct) {
+    if (!product.isEmpty()) {
       service.enableProduct();
       service.completeModule(0);
       service.completeModule(1);
@@ -61,9 +62,9 @@ public class TestSuite1 {
             new Module(4, 1, NOT_STARTED, List.of(0, 2), List.of(5)),
             new Module(5, 2, NOT_STARTED, List.of(3, 4), emptyList()));
 
-    boolean isValidProduct = service.creteProduct(modules);
+    Map<Integer, Module> product = service.creteProduct(modules);
 
-    if (isValidProduct) {
+    if (!product.isEmpty()) {
       service.enableProduct();
       service.completeModule(0);
       service.completeModule(1);
@@ -80,9 +81,9 @@ public class TestSuite1 {
             new Module(0, 0, NOT_STARTED, emptyList(), emptyList()),
             new Module(1, 0, NOT_STARTED, emptyList(), emptyList()));
 
-    boolean isValidProduct = service.creteProduct(modules);
+    Map<Integer, Module> product = service.creteProduct(modules);
 
-    if (isValidProduct) {
+    if (!product.isEmpty()) {
       service.enableProduct();
       service.completeModule(0);
       service.completeModule(1);
@@ -102,9 +103,9 @@ public class TestSuite1 {
             new Module(7, 3, NOT_STARTED, List.of(5, 6), emptyList()),
             new Module(8, 3, NOT_STARTED, emptyList(), emptyList()));
 
-    boolean isValidProduct = service.creteProduct(modules);
+    Map<Integer, Module> product = service.creteProduct(modules);
 
-    if (isValidProduct) {
+    if (!product.isEmpty()) {
       service.enableProduct();
       service.completeModule(0);
       service.completeModule(1);

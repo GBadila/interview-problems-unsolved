@@ -55,25 +55,29 @@ public class Service {
     }
   }
 
-  public boolean creteProduct(List<Module> modules) {
+  public Map<Integer, Module> creteProduct(List<Module> modules) {
     boolean isValidProduct = validateProduct(modules);
 
     // TODO: 1. CREATE PRODUCT
 
     printResults("1. CREATE PRODUCT");
 
-    return isValidProduct;
+    return CACHE;
   }
 
-  public void enableProduct() {
+  public Map<Integer, Module> enableProduct() {
     // TODO: 2. ENABLE PRODUCT
 
     printResults("2. ENABLE PRODUCT");
+
+    return CACHE;
   }
 
-  public void completeModule(int id) {
+  public Map<Integer, Module> completeModule(int id) {
     // TODO: 3. COMPLETE MODULE
 
     printResults(String.format("3. COMPLETE MODULE %d", id));
+
+    return CACHE;
   }
 }

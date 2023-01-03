@@ -4,6 +4,7 @@ import static java.util.Collections.emptyList;
 import static org.example.problem1.Module.Status.NOT_STARTED;
 
 import java.util.List;
+import java.util.Map;
 
 public class Main {
 
@@ -19,9 +20,9 @@ public class Main {
   public static void main(String[] args) {
     Service service = new Service(true);
 
-    boolean isValidProduct = service.creteProduct(MODULES);
+    Map<Integer, Module> product = service.creteProduct(MODULES);
 
-    if (isValidProduct) {
+    if (!product.isEmpty()) {
       service.enableProduct();
       service.completeModule(0);
       service.completeModule(1);
