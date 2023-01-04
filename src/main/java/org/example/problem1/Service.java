@@ -1,5 +1,7 @@
 package org.example.problem1;
 
+import static org.example.problem1.Module.Status.COMPLETED;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -20,6 +22,12 @@ public class Service {
     printValidation(hasCycle);
 
     return !hasCycle;
+  }
+
+  private static void checkAllModulesCompleted() {
+    if (CACHE.values().stream().allMatch(module -> module.getStatus() == COMPLETED)) {
+      System.out.println("==> PRODUCT COMPLETED");
+    }
   }
 
   private static void printValidation(boolean hasCycle) {
@@ -77,6 +85,7 @@ public class Service {
     // TODO: 3. COMPLETE MODULE
 
     printResults(String.format("3. COMPLETE MODULE %d", id));
+    checkAllModulesCompleted();
 
     return CACHE;
   }
