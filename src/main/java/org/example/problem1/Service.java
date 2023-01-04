@@ -14,6 +14,10 @@ public class Service {
     this.printDetails = printDetails;
   }
 
+  /*
+    As you've been noticed by now, our product is shaped as a graph. In order to validate the
+    product you have to check if the graph has any cycles.
+   */
   private static boolean validateProduct(List<Module> modules) {
     boolean hasCycle = false;
 
@@ -63,6 +67,10 @@ public class Service {
     }
   }
 
+  /*
+    Using the list of modules you need to create the "product" by saving those modules to the CACHE,
+    only if the "product" is valid.
+   */
   public Map<Integer, Module> creteProduct(List<Module> modules) {
     boolean isValidProduct = validateProduct(modules);
 
@@ -73,6 +81,15 @@ public class Service {
     return CACHE;
   }
 
+  /*
+    Enabling a product means that a user can start working on a product and complete modules.
+
+    A module can be completed only when is in IN_PROGRESS status and the first module that can be
+    completed should be the very first module (id = 0).
+
+    As soon as one module becomes read to be completed, all the standalone modules from the very
+    same stage should also be ready for completion.
+   */
   public Map<Integer, Module> enableProduct() {
     // TODO: 2. ENABLE PRODUCT
 
@@ -81,6 +98,12 @@ public class Service {
     return CACHE;
   }
 
+  /*
+    Completing a module means that a module has finally reached the COMPLETED status.
+
+    A module can be completed if it's in IN_PROGRESS state and all the inbounds modules have already
+    been completed.
+   */
   public Map<Integer, Module> completeModule(int id) {
     // TODO: 3. COMPLETE MODULE
 
