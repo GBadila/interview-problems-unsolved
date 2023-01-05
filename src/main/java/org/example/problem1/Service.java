@@ -99,10 +99,11 @@ public class Service {
   }
 
   /*
-    Completing a module means that a module has finally reached the COMPLETED status.
+    Completing a module means that a module has moved from IN_PROGRESS state to COMPLETED state.
 
-    A module can be completed if it's in IN_PROGRESS state and all the inbounds modules have already
-    been completed.
+    You might notice that some modules are not in IN_PROGRESS yet. We should make sure that, in the
+    background, whenever all inbounds modules are completed for a specific module, that module will
+    be automatically moved to IN_PROGRESS.
    */
   public Map<Integer, Module> completeModule(int id) {
     // TODO: 3. COMPLETE MODULE
