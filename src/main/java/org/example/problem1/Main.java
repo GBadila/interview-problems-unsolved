@@ -20,7 +20,7 @@ public class Main {
   public static void main(String[] args) {
     Service service = new Service(true);
 
-    Map<Integer, Module> product = service.creteProduct(MODULES);
+    Map<Integer, Module> product = service.createProduct(MODULES);
 
     if (!product.isEmpty()) {
       service.enableProduct();

@@ -34,7 +34,7 @@ public class TestSuite2 {
             new Module(0, 0, NOT_STARTED, List.of(1), List.of(1)),
             new Module(1, 0, NOT_STARTED, List.of(0), List.of(0)));
 
-    service.creteProduct(modules);
+    service.createProduct(modules);
   }
 
   private static void test2(Service service) {
@@ -46,7 +46,7 @@ public class TestSuite2 {
             new Module(3, 1, NOT_STARTED, List.of(1), List.of(0, 4)),
             new Module(4, 2, NOT_STARTED, List.of(3), emptyList()));
 
-    service.creteProduct(modules);
+    service.createProduct(modules);
   }
 
   private static void test3(Service service) {
@@ -59,6 +59,6 @@ public class TestSuite2 {
             new Module(4, 2, NOT_STARTED, List.of(5), List.of(2)),
             new Module(5, 3, NOT_STARTED, List.of(3), List.of(4)));
 
-    service.creteProduct(modules);
+    service.createProduct(modules);
   }
 }

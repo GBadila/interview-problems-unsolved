@@ -71,7 +71,7 @@ public class Service {
     Using the list of modules you need to create the "product" by saving those modules to the CACHE,
     only if the "product" is valid.
    */
-  public Map<Integer, Module> creteProduct(List<Module> modules) {
+  public Map<Integer, Module> createProduct(List<Module> modules) {
     boolean isValidProduct = validateProduct(modules);
 
     // TODO: 1. CREATE PRODUCT

@@ -40,7 +40,7 @@ public class TestSuite1 {
             new Module(3, 1, NOT_STARTED, List.of(0, 1), List.of(4)),
             new Module(4, 2, NOT_STARTED, List.of(3), emptyList()));
 
-    Map<Integer, Module> product = service.creteProduct(modules);
+    Map<Integer, Module> product = service.createProduct(modules);
 
     if (!product.isEmpty()) {
       service.enableProduct();
@@ -62,7 +62,7 @@ public class TestSuite1 {
             new Module(4, 1, NOT_STARTED, List.of(0, 2), List.of(5)),
             new Module(5, 2, NOT_STARTED, List.of(3, 4), emptyList()));
 
-    Map<Integer, Module> product = service.creteProduct(modules);
+    Map<Integer, Module> product = service.createProduct(modules);
 
     if (!product.isEmpty()) {
       service.enableProduct();
@@ -81,7 +81,7 @@ public class TestSuite1 {
             new Module(0, 0, NOT_STARTED, emptyList(), emptyList()),
             new Module(1, 0, NOT_STARTED, emptyList(), emptyList()));
 
-    Map<Integer, Module> product = service.creteProduct(modules);
+    Map<Integer, Module> product = service.createProduct(modules);
 
     if (!product.isEmpty()) {
       service.enableProduct();
@@ -103,7 +103,7 @@ public class TestSuite1 {
             new Module(7, 3, NOT_STARTED, List.of(5, 6), emptyList()),
             new Module(8, 3, NOT_STARTED, emptyList(), emptyList()));
 
-    Map<Integer, Module> product = service.creteProduct(modules);
+    Map<Integer, Module> product = service.createProduct(modules);
 
     if (!product.isEmpty()) {
       service.enableProduct();
