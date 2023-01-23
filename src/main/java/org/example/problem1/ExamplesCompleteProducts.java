@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 // TEST EXECUTION
-public class TestSuite1 {
+public class ExamplesCompleteProducts {
 
   public static void main(String[] args) {
     Service service = new Service(false);

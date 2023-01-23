@@ -6,7 +6,7 @@ import static org.example.problem1.Module.Status.NOT_STARTED;
 import java.util.List;
 
 // VALIDATE GRAPH: check for cycles
-public class TestSuite2 {
+public class ExamplesInvalidProducts {
 
   public static void main(String[] args) {
     Service service = new Service(false);
