@@ -84,11 +84,10 @@ public class Service {
   /*
     Enabling a product means that a user can start working on a product and complete modules.
 
-    A module can be completed only when is in IN_PROGRESS status and the first module that can be
-    completed should be the very first module (id = 0).
+    A module can be moved to IN_PROGRESS only if it hasn't been started yet (status = NOT_STARTED).
 
-    As soon as one module becomes read to be completed, all the standalone modules from the very
-    same stage should also be ready for completion.
+    The first module that can be completed should be the very first module (id = 0). All the
+    standalone modules from the very same stage should also be ready for completion.
    */
   public Map<Integer, Module> enableProduct() {
     // TODO: 2. ENABLE PRODUCT
@@ -104,6 +103,9 @@ public class Service {
     You might notice that some modules are not in IN_PROGRESS yet. We should make sure that, in the
     background, whenever all inbounds modules are completed for a specific module, that module will
     be automatically moved to IN_PROGRESS.
+
+    Whenever this happens, if there are any other standalone modules in the same stage with the
+    module which has just been put in IN_PROGRESS, those should also be moved to in IN_PROGRESS.
    */
   public Map<Integer, Module> completeModule(int id) {
     // TODO: 3. COMPLETE MODULE
